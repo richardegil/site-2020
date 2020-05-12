@@ -1,0 +1,136 @@
+// @import url("https://use.typekit.net/ijk6cdp.css");
+
+$jubilat-book: 400;
+$jubilat-medium: 500;
+$jubilat-semibold: 600;
+
+$avenir-book: 300;
+$avenir-medium: 500;
+$avenir-heavy: 700;
+$avenir-black: 900;
+
+$jubilat: jubilat,serif;
+// using Gibson for the time being 2020/02/28
+$avenir: canada-type-gibson,sans-serif;
+
+h1, h2, h3, h4 {
+  font-family: $jubilat;
+  color: $primary-blue;
+
+  position: relative;
+
+  small {
+    @apply absolute;
+    font-size: 1rem;
+    left: 0px;
+    top: -2rem;
+    color: $secondary-blue;
+    font-weight: $avenir-book;
+    font-family: $avenir;
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: $jubilat-medium;
+  margin-bottom: 1.25rem;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: $jubilat-medium;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: $jubilat-book;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  font-weight: $jubilat-book;
+  margin-bottom: 1rem;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: $avenir-book;
+  font-family: $avenir;
+  margin-bottom: 1rem;
+}
+
+p, li, a {
+  font-family: $avenir;
+  color: $primary-blue;
+  letter-spacing: 0.05rem;
+}
+
+input[type="submit"] {
+  font-family: $avenir;
+  letter-spacing: 0.05rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-weight: $avenir-book;
+  margin-bottom: 1.75rem;
+
+  // &:last-of-type {
+  //   margin-bottom: 0;
+  // }
+}
+
+.large {
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+}
+
+.small {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+
+
+a {
+  &.button {
+    font-size: 0.75rem;
+    margin-top: 0.75rem;
+
+    &--standard {
+      @apply relative;
+      @apply inline-block;
+
+      &:after {
+        content: '';
+        @apply absolute;
+        @apply inline-block;
+        @apply w-full;
+        bottom: -0.5rem;
+        left: 0;
+        background: $secondary-orange;
+        height: 2px;
+      }
+    }
+
+    &--large {
+      @apply relative;
+      padding: 1rem;
+      border-radius: 0.25rem;
+      color: white;
+      background: $secondary-orange;
+
+      &:hover {
+        color: $primary-blue;
+      }
+    }
+  }
+}
